@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#203226">
+    <meta name="description"
+        content="Agen Fikri Maju Bersama — pesan minuman segar, pilih varian, dan kirim pesanan langsung lewat WhatsApp.">
+    <title>FikriMart — Agen Fikri Maju Bersama</title>
+    <link rel="icon" href="banner sementara.jpg">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!--------HTML START------->
+    <nav id="siteNav">
+        <a class="logo" href="#" aria-label="FikriMart">
+            <span class="logo-mark">🥤</span>
+            <span>FikriMart</span>
+        </a>
+        <button class="cart-btn" id="cartOpenBtn">🛒 Keranjang <span id="cartCount">0</span></button>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-copy">
+            <span class="eyebrow">🌿 Harga sewaktu waktu bisa berubah</span>
+            <h1>Minuman segar,<br><span>pesan jadi gampang.</span></h1>
+            <p>
+                Pilih minuman favoritmu, tentukan variannya, masukkan ke keranjang,
+                lalu kirim detail pesanan langsung melalui WhatsApp.
+            </p>
+            <div class="hero-actions">
+                <a class="primary-btn" href="#produk" id="lihatProdukBtn">Lihat Produk ↓</a>
+                <button class="secondary-btn" id="heroOpenCartBtn">Buka Keranjang</button>
+            </div>
+        </div>
+        <div class="hero-visual">
+    <img
+        src="./banner sementara.jpg"
+        alt="Banner SegarMart"
+    >
+
+    </section>
+
+    <section class="features" aria-label="Cara memesan">
+        <div class="feature" data-action="pilih-produk">
+            <div class="feature-icon">🛍️</div>
+            <b>Pilih Produk</b>
+            <small>Scroll langsung ke katalog minuman.</small>
+        </div>
+        <div class="feature" data-action="isi-data">
+            <div class="feature-icon">🧾</div>
+            <b>Isi Data Pesanan</b>
+            <small>Nama, nomor telepon, dan alamat pengantaran.</small>
+        </div>
+        <div class="feature" data-action="pesan-wa">
+            <div class="feature-icon">💬</div>
+            <b>Pesan via WhatsApp</b>
+            <small>Detail pesanan siap dikirim ke agen.</small>
+        </div>
+    </section>
+
+    <main id="produk">
+        <div class="heading reveal">
+            <div>
+                <div class="section-kicker">Katalog</div>
+                <h2>Menu Minuman</h2>
+            </div>
+            <p>Pilih produk, tentukan varian bila tersedia, lalu tambahkan ke keranjang.</p>
+        </div>
+
+        <div class="search-wrap reveal">
+            <span class="search-icon">⌕</span>
+            <input id="search" class="search" placeholder="Cari minuman..." aria-label="Cari minuman">
+        </div>
+
+         <div class="cats reveal" id="categoryList">
+            <button class="active" data-category="Semua">Semua</button>
+            <button data-category="Air Mineral">Air Mineral</button>
+            <button data-category="Teh">Teh</button>
+            <button data-category="Susu">Susu</button>
+            <button data-category="Kopi">Kopi</button>
+            <button data-category="Lainnya">Lainnya</button>
+        </div>
+
+        <div id="productGrid" class="grid"></div>
+    </main>
+
+    <div id="overlay" class="overlay"></div>
+
+    <aside id="cart" class="cart" aria-label="Keranjang belanja">
+        <div class="carthead">
+            <h2>Pesanan Kamu</h2>
+            <button class="close" id="cartCloseBtn" aria-label="Tutup">✕</button>
+        </div>
+
+        <div id="cartItems"></div>
+
+        <div class="form">
+            <h3>Data Pemesan</h3>
+            <p>Isi sebelum mengirim pesanan.</p>
+
+            <div class="field">
+                <label for="customerName">Silakan masukan nama anda.</label>
+                <input id="customerName" placeholder="Contoh: Fikri">
+            </div>
+
+            <div class="field">
+                <label for="customerPhone">Nomor telepon</label>
+                <input id="customerPhone" type="tel" placeholder="Contoh: 081234567890">
+            </div>
+
+            <div class="field">
+                <label for="customerAddress">Alamat toko / pengantaran</label>
+                <textarea id="customerAddress" rows="3" placeholder="Contoh: Jl. ... No. ..."></textarea>
+            </div>
+        </div>
+
+        <div class="total">
+            <span>Total</span>
+            <span>Rp <span id="cartTotal">0</span></span>
+        </div>
+
+        <button class="checkout" id="checkoutBtn">💬 Kirim Pesanan ke WhatsApp</button>
+    </aside>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <button class="top-btn" id="topBtn" aria-label="Kembali ke atas">↑</button>
+
+    <footer>
+        <b>Agen Fikri Maju Bersama</b>
+        <p>WhatsApp: 0813-1525-0908</p>
+        <p>Harga sewaktu-waktu dapat berubah.</p>
+    </footer>
+    <!-- HTML END -->
+
+    <script src="script.js"></script>
+        
+
+</body>
+
+</html>
